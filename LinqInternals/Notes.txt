@@ -1,0 +1,59 @@
+﻿Hi...
+Welcome all!
+
+I'm going to create an application
+to use the WHERE Method of LINQ to 
+filter out all the even numbers from
+an integer array.
+
+Then I'll implement the same Method
+from scratch to acheieve the same outcome.
+
+This will demonstrate what is the
+internal implementation of WHERE and how it
+all works together with other features
+of .NET
+
+I've created a .Net Core Console app
+as you can see.
+
+(Go to Program.cs)
+
+Let's run the application...
+
+We got the output as expected.
+
+Let's understand the implementation of WHERE before begining
+our implementation.
+
+Where Implementation
+
+public static IEnumerable<TSource> Where<TSource>
+(IEnumerable<TSource> source, Func<TSource, bool> predicate)
+
+In our case TSource is int.
+
+Where takes an IEnumerable and a predicate which returns bool.
+
+Predicate is nothing but a function which tests each element
+of an IEnumerable for a specified condition.
+
+In our case the condition is x % 2
+
+Before implementing our WHERE Method let's see what are
+it's main constituents.
+
+The three main constituents or features of the C# programming
+language that is necessary for the implementation of a
+LINQ query are:
+
+1. The Extension Method
+2. Delegate (in our case we require Func Delegate)
+3. I'll create some suspense here. ;-)
+
+We'll discuss the third constituent at the end.
+
+Let's now begin with our implementation of WHERE.
+
+(Go to IEnumerableExtension.cs)
+
